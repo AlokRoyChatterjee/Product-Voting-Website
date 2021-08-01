@@ -29,11 +29,9 @@ class items extends React.Component {
 
 
     render() {
-
         const items = this.state.items.sort((a, b) => (
             b.votes - a.votes
         ));
-
         const productComponents = items.map((product) => (
             <Product
               key={'product-' + product.id}
@@ -50,7 +48,7 @@ class items extends React.Component {
 
         return (
             <div className="container">
-                <h1>Popular items</h1>
+                <h1>Best items</h1>
                 <hr />
                 {productComponents}
             </div>
